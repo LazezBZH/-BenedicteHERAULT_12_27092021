@@ -1,0 +1,36 @@
+.aside {
+  width: 4rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  padding: 2rem;
+}
+.aside-icones {
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  left: center;
+  top: 12rem;
+  padding: 0;
+  margin: 0;
+}
+.aside-icones li {
+  padding: 0.5rem 0;
+}
+.copyright {
+  color: white;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 7rem;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  width: 200px;
+  margin-left: -4rem;
+}

@@ -1,0 +1,7 @@
+.home {
+  position: absolute;
+  bottom: 18rem;
+  left: 18rem;
+  z-index: -1;
+  color: red;
+}
