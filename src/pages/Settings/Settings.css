@@ -1,7 +1,26 @@
 .settings {
   position: absolute;
   bottom: 18rem;
-  left: 18rem;
+  left: 12rem;
   z-index: -1;
   color: black;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.settings h1 {
+  color: #ff0101;
+  margin-left: 18rem;
+}
+.logo-react {
+  width: 5rem;
+  transform: translate(0, 2rem);
+}
+
+.logo-sportsee {
+  transform: rotate(-25deg);
+}
+.settings i {
+  font-size: 2rem;
+  color: #ff0101;
+  padding: 0 1rem;
 }

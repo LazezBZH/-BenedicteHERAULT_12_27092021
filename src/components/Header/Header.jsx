@@ -1,19 +1,17 @@
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg";
+import HeaderNav from "../HeaderNav/HeaderNav";
 import "./Header.css";
 
 function Header() {
   return (
     <div className="header">
       <div className="logo-header">
-        <img src={logo} alt="logo de Kasa" />
+        <Link to="/">
+          <img src={logo} alt="logo de SportSee" />
+        </Link>
       </div>
-
-      <ul className="nav-header">
-        <li>Accueil</li>
-        <li>Profil</li>
-        <li>Réglage</li>
-        <li>Communauté</li>
-      </ul>
+      <HeaderNav />
     </div>
   );
 }
