@@ -6,32 +6,24 @@ import Home from "../../pages/Home/Home";
 import Dashboard from "../../pages/Dashboard/Dashboard";
 import Settings from "../../pages/Settings/Settings";
 import Network from "../../pages/Network/Network";
+import Error from "../../pages/Error/Error";
 import "./App.css";
 
 function App() {
   return (
-    <div>
-      <React.StrictMode>
-        <Router>
-          <Header />
-          <Aside />
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/profile">
-              <Dashboard />
-            </Route>
-            <Route path="/settings">
-              <Settings />
-            </Route>
-            <Route path="/network">
-              <Network />
-            </Route>
-          </Switch>
-        </Router>
-      </React.StrictMode>
-    </div>
+    <React.StrictMode>
+      <Router>
+        <Header />
+        <Aside />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/user/:id" component={Dashboard} />
+          <Route path="/settings" component={Settings} />
+          <Route path="/network" component={Network} />
+          <Route component={Error} />
+        </Switch>
+      </Router>
+    </React.StrictMode>
   );
 }
 

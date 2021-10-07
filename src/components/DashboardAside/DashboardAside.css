@@ -1,0 +1,9 @@
+.dashboard-aside {
+  position: absolute;
+  right: 5rem;
+  margin-top: 3rem;
+}
+.count {
+  display: flex;
+  margin: 2rem auto;
+}

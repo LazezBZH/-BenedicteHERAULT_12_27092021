@@ -1,0 +1,8 @@
+.error {
+  padding: 5rem;
+  background-color: yellow;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10rem;
+  left: 20rem;
+}
