@@ -1,16 +1,13 @@
 import "./Network.css";
-import logo from "../../assets/logo.svg";
-import logoReact from "../../assets/react.png";
+import Construction from "../../components/Construction/Construction";
+import Demo from "../../components/Demo/Demo";
 
 function Network() {
   return (
-    <div className="network">
+    <div className="home">
       <h1>COMMUNAUTÉ</h1>
-      Cette page
-      <img src={logo} className="logo-sportsee" alt="logo de SportSee" />
-      est en cours de <i className="fas fa-cogs"></i> construction
-      <i className="fas fa-cogs"></i> avec React
-      <img src={logoReact} className="logo-react" alt="logo de React" />
+      <Construction />
+      <Demo />
     </div>
   );
 }

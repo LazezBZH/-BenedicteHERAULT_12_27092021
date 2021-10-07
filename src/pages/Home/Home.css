@@ -1,26 +1,12 @@
 .home {
-  position: absolute;
+  position: relative;
   bottom: 18rem;
   left: 12rem;
   z-index: -1;
-  color: black;
-  font-size: 1.1rem;
-  font-weight: 500;
 }
 .home h1 {
   color: #ff0101;
-  margin-left: 18rem;
-}
-.logo-react {
-  width: 5rem;
-  transform: translate(0, 2rem);
-}
-
-.logo-sportsee {
-  transform: rotate(-25deg);
-}
-.home i {
-  font-size: 2rem;
-  color: #ff0101;
-  padding: 0 1rem;
+  margin-left: 25rem;
+  position: absolute;
+  top: 18rem;
 }

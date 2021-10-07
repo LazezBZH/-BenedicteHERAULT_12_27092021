@@ -1,0 +1,22 @@
+.construction {
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 500;
+  position: absolute;
+  top: 25rem;
+  margin-left: 5rem;
+}
+
+.logo-react {
+  width: 5rem;
+  transform: translate(0, 2rem);
+}
+
+.logo-sportsee {
+  transform: rotate(-25deg);
+}
+.construction i {
+  font-size: 2rem;
+  color: #ff0101;
+  padding: 0 1rem;
+}

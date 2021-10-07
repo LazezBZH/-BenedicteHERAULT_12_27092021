@@ -1,0 +1,24 @@
+.profile-link {
+  width: 60%;
+  margin: auto;
+  position: absolute;
+  top: 35rem;
+}
+.profile-link p {
+  font-size: 2rem;
+  text-align: center;
+}
+.demo {
+  display: flex;
+  margin: 2rem 5rem;
+}
+.btn {
+  color: white;
+  background-color: #e60000;
+  text-decoration: none;
+  padding: 1rem;
+  margin: 0 3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 20px;
+}
