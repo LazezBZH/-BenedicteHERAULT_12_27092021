@@ -6,7 +6,7 @@ import {
   XAxis,
   YAxis,
   Tooltip,
-  Legend,
+  ResponsiveContainer,
 } from "recharts";
 import "./Goals.css";
 import useFetch from "../../utils/getDatas";
@@ -32,6 +32,9 @@ export default function Goals() {
   const { data, loading, error } = useFetch(`../user/${id}/activity.json`);
   const goal = data.sessions;
   console.log(goal);
+  const formatXAxis = (tickItem) => {
+    return tickItem + 1;
+  };
 
   if (error) {
     return <span>Oups il y a eu un petit problème</span>;
@@ -41,58 +44,66 @@ export default function Goals() {
 
   return (
     <section className="GoalsContainer">
-      <div className="GoalsTitle">Activité quotidienne</div>
-      <BarChart
-        width={600}
-        height={300}
-        data={goal}
-        margin={{
-          top: 20,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-        barCategoryGap="30%"
-      >
-        <CartesianGrid
-          strokeDasharray="2 5"
-          vertical={false}
-          stroke="#DEDEDE"
-        />
-        <XAxis
-          dataKey="day"
-          tickLine={false}
-          padding={{ left: -25, right: -25 }}
-        />
-        <YAxis yAxisId="left" orientation="left" hide={true} />
-        <YAxis
-          yAxisId="right"
-          orientation="right"
-          domain={["dataMin-10", "dataMax+2"]}
-          axisLine={false}
-          tickLine={false}
-        />
-        <Tooltip position={{ y: 40 }} content={<CustomTooltip />} />
-        <Legend
-          verticalAlign="top"
-          align="right"
-          iconSize="10"
-          iconType="circle"
-          height={40}
-        />
-        <Bar
-          yAxisId="right"
-          dataKey="kilogram"
-          fill="black"
-          radius={[50, 50, 0, 0]}
-        />
-        <Bar
-          yAxisId="left"
-          dataKey="calories"
-          fill="#E60000"
-          radius={[50, 50, 0, 0]}
-        />
-      </BarChart>
+      <div className="GoalsLegend">
+        <div className="GoalsTitle">Activité quotidienne</div>
+        <div className="GoalsCircles">
+          <div className="GoalsCircle">
+            <div className="goals-circle_black"></div>
+            <p>Poids (kg)</p>
+          </div>
+          <div className="GoalsCircle">
+            <div className=" goals-circle_red"></div>
+            <p>Calories brûlées (kCal)</p>
+          </div>
+        </div>
+      </div>
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart
+          width={900}
+          height={300}
+          data={goal}
+          margin={{
+            top: 20,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+          barCategoryGap="40%"
+        >
+          <CartesianGrid
+            strokeDasharray="2 5"
+            vertical={false}
+            stroke="#DEDEDE"
+          />
+          <XAxis
+            tickFormatter={formatXAxis}
+            tickLine={false}
+            padding={{ left: -65, right: -65 }}
+          />
+          <YAxis yAxisId="left" orientation="left" hide={true} />
+          <YAxis
+            yAxisId="right"
+            orientation="right"
+            domain={["dataMin-10", "dataMax+2"]}
+            axisLine={false}
+            tickLine={false}
+          />
+          <Tooltip position={{ y: 40 }} content={<CustomTooltip />} />
+
+          <Bar
+            yAxisId="right"
+            dataKey="kilogram"
+            fill="black"
+            radius={[50, 50, 0, 0]}
+          />
+          <Bar
+            yAxisId="left"
+            dataKey="calories"
+            fill="#E60000"
+            radius={[50, 50, 0, 0]}
+          />
+        </BarChart>
+      </ResponsiveContainer>
     </section>
   );
 }

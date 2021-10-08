@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Header from "../Header/Header";
-import Aside from "../Aside/Aside";
+//import Header from "../Header/Header";
+//import Aside from "../Aside/Aside";
 import Home from "../../pages/Home/Home";
 import Dashboard from "../../pages/Dashboard/Dashboard";
 import Settings from "../../pages/Settings/Settings";
@@ -13,8 +13,6 @@ function App() {
   return (
     <React.StrictMode>
       <Router>
-        <Header />
-        <Aside />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/user/:id" component={Dashboard} />

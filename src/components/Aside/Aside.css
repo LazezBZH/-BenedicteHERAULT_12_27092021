@@ -1,23 +1,21 @@
 .aside {
-  width: 4rem;
+  width: 6rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: black;
+  z-index: -1;
   position: absolute;
   top: 0;
-  z-index: -1;
-  padding: 2rem;
+  padding: 0;
 }
 .aside-icones {
   height: 40vh;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  position: absolute;
-  left: center;
-  top: 12rem;
-  padding: 0;
+
+  padding: 15rem 1rem;
   margin: 0;
 }
 .aside-icones li {

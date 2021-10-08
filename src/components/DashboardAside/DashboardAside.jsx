@@ -26,23 +26,28 @@ export default function DashboardAside() {
     <div className="dashboard-aside">
       <div className="count calorieCount">
         <img src={calories} className="icone-calories" alt="calories" />
-        {user.calorieCount}
-        <br></br>Calories
+        <div className="textCount">
+          {user.calorieCount}kCal
+          <p>Calories</p>
+        </div>
       </div>
       <div className="count proteinCount">
         <img src={proteines} className="icone-proteines" alt="protéines" />
-        {user.proteinCount}
-        <br></br>Protéines
+        <div className="textCount">
+          {user.proteinCount}g<p>Protéines</p>
+        </div>
       </div>
       <div className="count carbohydrateCount">
         <img src={gludides} className="icone-glucides" alt="glucides" />
-        {user.carbohydrateCount}
-        <br></br>Glucides
+        <div className="textCount">
+          {user.carbohydrateCount}g<p>Glucides</p>
+        </div>
       </div>
       <div className="count lipidCount">
         <img src={lipides} className="icone-lipides" alt="lipides" />
-        {user.lipidCount}
-        <br></br>Lipides
+        <div className="textCount">
+          {user.lipidCount}g<p>Lipides</p>
+        </div>
       </div>
     </div>
   );

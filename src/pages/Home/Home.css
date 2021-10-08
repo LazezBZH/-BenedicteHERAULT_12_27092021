@@ -1,12 +1,7 @@
 .home {
-  position: relative;
-  bottom: 18rem;
-  left: 12rem;
-  z-index: -1;
+  width: auto;
 }
 .home h1 {
   color: #ff0101;
   margin-left: 25rem;
-  position: absolute;
-  top: 18rem;
 }

@@ -9,11 +9,14 @@
 }
 .nav-header {
   display: flex;
-  width: 100%;
-  padding: 0;
-  justify-content: space-evenly;
-  align-items: center;
+  width: 65%;
+  margin: 2rem 0rem 0 0;
+  justify-content: space-between;
+  color: white;
+  position: absolute;
+  right: 3rem;
 }
+
 .nav-header li {
   list-style: none;
 }
@@ -22,9 +25,7 @@
   margin-left: 2rem;
   margin-top: 1rem;
 }
-.nav-header {
-  color: white;
-}
+
 .links {
   color: white;
   text-decoration: none;

@@ -2,7 +2,8 @@
   width: 60%;
   margin: auto;
   position: absolute;
-  top: 35rem;
+  top: 25rem;
+  margin-left: 8rem;
 }
 .profile-link p {
   font-size: 2rem;

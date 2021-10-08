@@ -6,7 +6,7 @@ export default function Demo() {
     <div className="profile-link">
       <p>
         Cette appli a besoin pour fonctionner d'une API, vous pouvez néanmoins
-        voire une démo avec les données mockées en cliquant ci-dessous:
+        voir une démo avec les données mockées en cliquant ci-dessous:
       </p>
       <div className="demo">
         <Link className="btn" to="/user/12">
