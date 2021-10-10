@@ -1,20 +1,34 @@
 .GoalsContainer {
-  width: 25rem;
-  margin-left: 48rem;
-  margin-top: 2rem;
+  width: 22rem;
+  height: 15rem;
   position: relative;
+  background-color: #e60000;
+  padding-bottom: 5rem;
 }
 .GoalsTitle {
   font-size: 1.2rem;
-}
-.GoalsLegend {
   position: absolute;
-  left: 25%;
-  bottom: 35%;
+  top: 0;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 1rem;
+  margin-top: 0.5rem;
 }
-.GoalsLegend p {
-  margin: 0;
+
+.custom-tooltip_goals {
+  font-size: 0.8rem;
+  line-height: 0rem;
+  padding: 0.5rem 0.5rem;
+  background-color: white;
 }
-.renderLabel {
-  padding-left: 1rem;
+
+.formatXAxis {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  margin: 0 0rem 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  bottom: 1rem;
 }

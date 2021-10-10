@@ -52,7 +52,7 @@ export default function Weight() {
             <p>Poids (kg)</p>
           </div>
           <div className="WeightCircle">
-            <div className=" Weight-circle_red"></div>
+            <div className=" weight-circle_red"></div>
             <p>Calories brûlées (kCal)</p>
           </div>
         </div>

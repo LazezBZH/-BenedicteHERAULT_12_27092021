@@ -6,6 +6,7 @@ import Weight from "../../components/Weight/Weight";
 import Header from "../../components/Header/Header";
 import Aside from "../../components/Aside/Aside";
 import Goals from "../../components/Goals/Goals";
+import Score from "../../components/Score/Score";
 
 export default function Dashboard() {
   let userId = useParams();
@@ -17,7 +18,10 @@ export default function Dashboard() {
       <Hello />
       <DashboardAside />
       <Weight />
-      <Goals />
+      <div className="figures">
+        <Goals />
+        <Score />
+      </div>
     </div>
   );
 }
