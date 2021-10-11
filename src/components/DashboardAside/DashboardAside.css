@@ -1,11 +1,16 @@
 .dashboard-aside {
   position: absolute;
   right: 0rem;
-  margin-top: 3rem;
-  margin-right: 5rem;
+  top: 0;
+  bottom: 0;
+  margin-right: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .count {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   margin: 2rem auto;
 }
@@ -13,8 +18,12 @@
   margin-left: 1rem;
   margin-top: 1rem;
   line-height: 0.5;
-  font-weight: 900;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #282d30;
 }
 .textCount p {
+  font-size: 0.8rem;
   font-weight: 500;
+  color: #74798c;
 }

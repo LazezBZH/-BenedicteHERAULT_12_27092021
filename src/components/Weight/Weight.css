@@ -1,6 +1,7 @@
 .WeightContainer {
   width: 85%;
   background-color: #fbfbfb;
+  margin-top: 4rem;
 }
 
 .custom-tooltip {
@@ -14,15 +15,18 @@
 .WeightLegend {
   width: 90%;
   margin-left: 2rem;
-
   display: flex;
   justify-content: space-between;
 }
 .WeightTitle {
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
+  padding-top: 0.8rem;
 }
 .WeightCircles {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #74798c;
   width: 18rem;
   display: flex;
   justify-content: space-between;

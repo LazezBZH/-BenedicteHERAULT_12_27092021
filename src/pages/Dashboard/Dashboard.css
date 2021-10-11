@@ -1,3 +1,7 @@
+.mainDashboard {
+  position: relative;
+}
+
 .allFigures {
   width: 78%;
   margin-left: 10rem;

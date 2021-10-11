@@ -1,12 +1,12 @@
 .aside {
   width: 6rem;
-  height: 150vh;
   display: flex;
   flex-direction: column;
   background-color: black;
   z-index: -1;
   position: absolute;
-  top: 0;
+  top: 0rem;
+  bottom: -400px;
   padding: 0;
 }
 .aside-icones {
@@ -25,10 +25,10 @@
   color: white;
   font-size: 0.8rem;
   position: absolute;
-  bottom: 7rem;
+  top: 55rem;
+  left: -3rem;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   width: 200px;
-  margin-left: -4rem;
 }

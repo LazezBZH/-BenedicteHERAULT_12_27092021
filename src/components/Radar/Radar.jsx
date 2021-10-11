@@ -70,7 +70,7 @@ export default function RadarFig() {
             dataKey="kind"
             tickLine={false}
             tickFormatter={(kind) => formatActivity(kind, allKinds)}
-            tick={{ fontSize: 14, fontWeight: 500 }}
+            tick={{ fontSize: 12, fontWeight: 500 }}
             stroke="white"
             dy={4}
           />

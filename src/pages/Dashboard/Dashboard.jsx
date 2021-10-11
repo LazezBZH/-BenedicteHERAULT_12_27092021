@@ -17,13 +17,15 @@ export default function Dashboard() {
       <Header />
       <Aside />
       <Hello />
-      <DashboardAside />
-      <div className="allFigures">
-        <Weight />
-        <div className="figures">
-          <Goals />
-          <RadarFig />
-          <Score />
+      <div className="mainDashboard">
+        <DashboardAside />
+        <div className="allFigures">
+          <Weight />
+          <div className="figures">
+            <Goals />
+            <RadarFig />
+            <Score />
+          </div>
         </div>
       </div>
     </div>

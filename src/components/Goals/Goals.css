@@ -5,16 +5,19 @@
   background-color: #e60000;
 }
 .GoalsTitle {
+  width: 70%;
   font-size: 1.2rem;
+  font-weight: 500;
   position: absolute;
   top: 0;
   color: rgba(255, 255, 255, 0.6);
-  margin-left: 1rem;
+  margin-left: 2rem;
   margin-top: 0.5rem;
 }
 
 .custom-tooltip_goals {
   font-size: 0.8rem;
+  font-weight: 600;
   line-height: 0rem;
   padding: 0.5rem 0.5rem;
   background-color: white;
@@ -25,8 +28,8 @@
   width: 95%;
   justify-content: space-between;
   margin: 0 0rem 0 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.6);
   position: absolute;
   bottom: 1rem;

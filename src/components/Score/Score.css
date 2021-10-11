@@ -6,11 +6,16 @@
 .ScoreTitle {
   position: absolute;
   top: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #20253a;
 }
 .ScoreLegend {
+  color: #282d30;
+  font-size: 0.8rem;
+  font-weight: 500;
   position: absolute;
-  left: 35%;
+  left: 40%;
   bottom: 40%;
 }
 .ScoreLegend p {
@@ -18,5 +23,6 @@
   text-align: center;
 }
 .renderLabel {
-  padding-left: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
 }

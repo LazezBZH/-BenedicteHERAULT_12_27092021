@@ -23,7 +23,7 @@ export default function Hello() {
       <h1>
         Bonjour <span className="firstname">{user.firstName}</span>
       </h1>
-      <p>Félicitation ! Vous avez explosé vos objectifs hier</p>
+      <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
     </div>
   );
 }

@@ -1,4 +1,14 @@
 .dashboard-header {
-  color: red;
   margin-left: 10rem;
+}
+.firstname {
+  color: red;
+}
+.dashboard-header h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.dashboard-header p {
+  font-size: 1.3rem;
+  font-weight: 400;
 }

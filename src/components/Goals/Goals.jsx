@@ -71,7 +71,7 @@ export default function Goals() {
   return (
     <section className="GoalsContainer">
       <div className="GoalsTitle">Durée moyenne des sessions</div>
-      <ResponsiveContainer width="100%" height="100%" padding={5}>
+      <ResponsiveContainer width="100%" height="108%" padding={5}>
         <LineChart
           data={goals}
           margin={{ top: 0, right: 0, left: 0, bottom: -10 }}

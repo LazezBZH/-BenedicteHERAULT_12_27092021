@@ -76,6 +76,7 @@ export default function Weight() {
           />
           <XAxis
             tickFormatter={formatXAxis}
+            tick={{ fill: "#9b9eac" }}
             tickLine={false}
             stroke="#DEDEDE"
             padding={{ left: -47, right: -47 }}

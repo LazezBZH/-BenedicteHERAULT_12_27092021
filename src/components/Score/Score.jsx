@@ -35,7 +35,7 @@ export default function Score() {
             dataKey="value"
             data={score}
             fill="#8884d8"
-            innerRadius={65}
+            innerRadius={68}
             outerRadius={80}
             startAngle={90}
             endAngle={480}
