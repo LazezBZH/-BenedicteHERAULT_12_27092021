@@ -72,12 +72,13 @@ export default function Weight() {
           <CartesianGrid
             strokeDasharray="2 5"
             vertical={false}
-            stroke="#DEDEDE"
+            stroke="#dedede"
           />
           <XAxis
             tickFormatter={formatXAxis}
             tickLine={false}
-            padding={{ left: -45, right: -45 }}
+            stroke="#DEDEDE"
+            padding={{ left: -47, right: -47 }}
             tickSize="25"
           />
           <YAxis yAxisId="left" orientation="left" hide={true} />
@@ -89,7 +90,14 @@ export default function Weight() {
             tickLine={false}
             tickSize="50"
           />
-          <Tooltip position={{ y: 40 }} content={<CustomTooltip />} />
+          <Tooltip
+            position={{ y: 40 }}
+            cursor={{
+              fill: "#C4C4C4",
+              fillOpacity: ".5",
+            }}
+            content={<CustomTooltip />}
+          />
 
           <Bar
             yAxisId="right"

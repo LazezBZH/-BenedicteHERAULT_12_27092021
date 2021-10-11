@@ -1,9 +1,8 @@
 .GoalsContainer {
-  width: 22rem;
-  height: 15rem;
+  width: 20vw;
+  height: 20vw;
   position: relative;
   background-color: #e60000;
-  padding-bottom: 5rem;
 }
 .GoalsTitle {
   font-size: 1.2rem;

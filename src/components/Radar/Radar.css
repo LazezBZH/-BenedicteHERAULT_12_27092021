@@ -1,0 +1,6 @@
+.RadarContainer {
+  width: 20vw;
+  height: 20vw;
+  position: relative;
+  background-color: black;
+}

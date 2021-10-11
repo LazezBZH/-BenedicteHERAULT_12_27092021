@@ -1,6 +1,6 @@
 .WeightContainer {
-  max-width: 65%;
-  margin-left: 10rem;
+  width: 85%;
+  background-color: #fbfbfb;
 }
 
 .custom-tooltip {
@@ -14,7 +14,7 @@
 .WeightLegend {
   width: 90%;
   margin-left: 2rem;
-  margin-top: 2r;
+
   display: flex;
   justify-content: space-between;
 }

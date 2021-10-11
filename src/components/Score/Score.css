@@ -1,17 +1,21 @@
 .ScoreContainer {
-  width: 25rem;
+  width: 20vw;
+  height: 20vw;
   position: relative;
 }
 .ScoreTitle {
+  position: absolute;
+  top: 0;
   font-size: 1.2rem;
 }
 .ScoreLegend {
   position: absolute;
-  left: 25%;
-  bottom: 35%;
+  left: 35%;
+  bottom: 40%;
 }
 .ScoreLegend p {
   margin: 0;
+  text-align: center;
 }
 .renderLabel {
   padding-left: 1rem;

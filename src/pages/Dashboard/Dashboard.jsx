@@ -7,6 +7,7 @@ import Header from "../../components/Header/Header";
 import Aside from "../../components/Aside/Aside";
 import Goals from "../../components/Goals/Goals";
 import Score from "../../components/Score/Score";
+import RadarFig from "../../components/Radar/Radar";
 
 export default function Dashboard() {
   let userId = useParams();
@@ -17,10 +18,13 @@ export default function Dashboard() {
       <Aside />
       <Hello />
       <DashboardAside />
-      <Weight />
-      <div className="figures">
-        <Goals />
-        <Score />
+      <div className="allFigures">
+        <Weight />
+        <div className="figures">
+          <Goals />
+          <RadarFig />
+          <Score />
+        </div>
       </div>
     </div>
   );

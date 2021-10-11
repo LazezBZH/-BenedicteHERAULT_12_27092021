@@ -29,7 +29,7 @@ export default function Score() {
     <section className="ScoreContainer">
       <div className="ScoreTitle">Score</div>
 
-      <ResponsiveContainer width="60%" height={180}>
+      <ResponsiveContainer width="100%" height="100%">
         <PieChart>
           <Pie
             dataKey="value"
