@@ -8,8 +8,8 @@ function Network() {
   return (
     <div className="home">
       <Header />
-      <h1>COMMUNAUTÉ</h1>
       <Aside />
+      <h1>COMMUNAUTÉ</h1>
       <Construction />
       <Demo />
     </div>

@@ -6,3 +6,7 @@
 .demo-error p {
   color: white;
 }
+.error {
+  font-size: 3rem;
+  margin: 5rem 0 0 20rem;
+}

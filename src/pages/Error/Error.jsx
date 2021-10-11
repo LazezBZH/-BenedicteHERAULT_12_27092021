@@ -9,7 +9,7 @@ function Error() {
       <Header />
 
       <Aside />
-
+      <h1 className="error">Erreur 404</h1>
       <Demo />
     </div>
   );

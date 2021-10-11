@@ -8,8 +8,9 @@ function Home() {
   return (
     <div className="home">
       <Header />
-      <h1>ACCUEIL</h1>
       <Aside />
+      <h1>ACCUEIL</h1>
+
       <Construction />
       <Demo />
     </div>

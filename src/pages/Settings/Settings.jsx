@@ -8,8 +8,8 @@ function Settings() {
   return (
     <div className="home">
       <Header />
-      <h1>RÉGLAGES</h1>
       <Aside />
+      <h1>RÉGLAGES</h1>
       <Construction />
       <Demo />
     </div>
