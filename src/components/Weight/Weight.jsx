@@ -1,4 +1,3 @@
-import { useParams } from "react-router";
 import {
   BarChart,
   CartesianGrid,
@@ -9,7 +8,6 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import "./Weight.css";
-import useFetch from "../../utils/getDatas";
 
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
@@ -24,23 +22,10 @@ const CustomTooltip = ({ active, payload, label }) => {
   return null;
 };
 
-export default function Weight() {
-  const urlId = useParams();
-  const id = parseInt(urlId.id);
-  console.log(id);
-
-  const { data, loading, error } = useFetch(`../user/${id}/activity.json`);
-  const weight = data.sessions;
-  console.log(weight);
+export default function Weight({ data }) {
   const formatXAxis = (tickItem) => {
     return tickItem + 1;
   };
-
-  if (error) {
-    return <span>Oups il y a eu un petit problème</span>;
-  } else if (loading) {
-    return <div>loading</div>;
-  }
 
   return (
     <section className="WeightContainer">
@@ -59,7 +44,7 @@ export default function Weight() {
       </div>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart
-          data={weight}
+          data={data}
           margin={{
             top: 30,
             right: 50,

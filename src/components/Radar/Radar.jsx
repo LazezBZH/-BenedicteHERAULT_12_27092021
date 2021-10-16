@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router";
+import PropTypes from "prop-types";
 import {
   Radar,
   RadarChart,
@@ -7,72 +7,60 @@ import {
   PolarAngleAxis,
   ResponsiveContainer,
 } from "recharts";
-
 import "./Radar.css";
-import useFetch from "../../utils/getDatas";
 
-export default function RadarFig() {
-  const urlId = useParams();
-  const id = parseInt(urlId.id);
-  console.log(id);
-
-  const { data, loading, error } = useFetch(`../user/${id}/performance.json`);
-
-  const formatActivity = (kind, array) => {
-    const arrayKind = array[kind];
-    let activityInFrench;
-    switch (arrayKind) {
+export default function RadarFig({ data: { data } }) {
+  const formatActivity = (kind) => {
+    let activitiInFrench;
+    switch (kind) {
       case "cardio":
-        activityInFrench = "Cardio";
+        activitiInFrench = "Cardio";
         break;
       case "energy":
-        activityInFrench = "Énergie";
+        activitiInFrench = "Énergie";
         break;
       case "endurance":
-        activityInFrench = "Endurance";
+        activitiInFrench = "Endurance";
         break;
       case "strength":
-        activityInFrench = "Force";
+        activitiInFrench = "Force";
         break;
       case "speed":
-        activityInFrench = "Vitesse";
+        activitiInFrench = "Vitesse";
         break;
       case "intensity":
-        activityInFrench = "Intensité";
+        activitiInFrench = "Intensité";
         break;
       default:
-        activityInFrench = "";
+        activitiInFrench = "";
         break;
     }
-    return activityInFrench;
+    return activitiInFrench;
   };
-  const allKinds = data.kind;
-  const performance = data.data;
-  if (error) {
-    return <span>Oups il y a eu un petit problème</span>;
-  } else if (loading) {
-    return <div>loading</div>;
-  }
   return (
     <section className="RadarContainer">
-      <ResponsiveContainer width="100%" height="100%" padding={5}>
+      <ResponsiveContainer
+        className="containerRadar"
+        width="100%"
+        height="100%"
+        padding={5}
+      >
         <RadarChart
           cx="50%"
-          cy="48%"
+          cy="50%"
           innerRadius="10%"
           outerRadius="70%"
-          data={performance}
-          startAngle={-150}
-          endAngle={210}
+          data={data}
         >
           <PolarGrid radialLines={false} />
           <PolarAngleAxis
             dataKey="kind"
             tickLine={false}
-            tickFormatter={(kind) => formatActivity(kind, allKinds)}
+            tickFormatter={(kind) => formatActivity(kind)}
             tick={{ fontSize: 12, fontWeight: 500 }}
             stroke="white"
             dy={4}
+            radius="100"
           />
 
           <Radar
@@ -86,3 +74,7 @@ export default function RadarFig() {
     </section>
   );
 }
+
+RadarFig.propTypes = {
+  data: PropTypes.object.isRequired,
+};

@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router";
+import PropTypes from "prop-types";
 import {
   LineChart,
   Line,
@@ -9,71 +9,26 @@ import {
   Tooltip,
 } from "recharts";
 import "./Goals.css";
-import useFetch from "../../utils/getDatas";
 
-const CustomTooltip = ({ active, payload, label }) => {
-  if (active && payload && payload.length) {
-    return (
-      <div className="custom-tooltip_goals">
-        <p> {`${payload[0].value} `}min</p>
-      </div>
-    );
-  }
-
-  return null;
-};
-
-export default function Goals() {
-  const urlId = useParams();
-  const id = parseInt(urlId.id);
-  console.log(id);
-
-  const { data, loading, error } = useFetch(
-    `../user/${id}/average-session.json`
-  );
-  const goals = data.sessions;
-  const formatXAxis = (day) => {
-    let letterForDay;
-    switch (day) {
-      case 1:
-        letterForDay = "L";
-        break;
-      case 2:
-        letterForDay = "M";
-        break;
-      case 3:
-        letterForDay = "M";
-        break;
-      case 4:
-        letterForDay = "J";
-        break;
-      case 5:
-        letterForDay = "V";
-        break;
-      case 6:
-        letterForDay = "S";
-        break;
-      case 7:
-        letterForDay = "D";
-        break;
-      default:
-        letterForDay = "";
-        break;
+export default function Goals({ data: { sessions } }) {
+  const CustomTooltip = ({ active, payload }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="custom-tooltip_goals">
+          <p> {`${payload[0].value} `}min</p>
+        </div>
+      );
     }
-    return letterForDay;
+
+    return null;
   };
 
-  if (error) {
-    return <span>Oups il y a eu un petit problème</span>;
-  } else if (loading) {
-    return <div>loading</div>;
-  }
   return (
     <section className="GoalsContainer">
       <div className="GoalsTitle">Durée moyenne des sessions</div>
       <ResponsiveContainer width="100%" height="108%" padding={5}>
         <LineChart
-          data={goals}
+          data={sessions}
           margin={{ top: 0, right: 0, left: 0, bottom: -10 }}
         >
           <XAxis
@@ -116,12 +71,18 @@ export default function Goals() {
         </LineChart>
       </ResponsiveContainer>
       <div className="formatXAxis">
-        {goals.map((item) => (
-          <div key={item.day} className="letters">
-            {formatXAxis(item.day)}
-          </div>
-        ))}
+        <div>L</div>
+        <div>M</div>
+        <div>M</div>
+        <div>J</div>
+        <div>V</div>
+        <div>S</div>
+        <div>D</div>
       </div>
     </section>
   );
 }
+
+Goals.propTypes = {
+  data: PropTypes.object.isRequired,
+};

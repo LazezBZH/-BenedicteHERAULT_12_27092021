@@ -1,16 +1,9 @@
 import React from "react";
-import { useParams } from "react-router";
-import { ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 import "./Score.css";
-import useFetch from "../../utils/getDatas";
+import { ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 
-export default function Score() {
-  const urlId = useParams();
-  const id = parseInt(urlId.id);
-  console.log(id);
-
-  const { data, loading, error } = useFetch(`../user/${id}.json`);
-  const todayScore = data.todayScore;
+export default function Score({ data }) {
+  const todayScore = data;
   const scorePerCent = todayScore * 100;
   const rest = 100 - scorePerCent;
   const score = [
@@ -20,11 +13,6 @@ export default function Score() {
   const renderLabel = score[0].value + "%";
   console.log(renderLabel);
 
-  if (error) {
-    return <span>Oups il y a eu un petit problème</span>;
-  } else if (loading) {
-    return <div>loading</div>;
-  }
   return (
     <section className="ScoreContainer">
       <div className="ScoreTitle">Score</div>

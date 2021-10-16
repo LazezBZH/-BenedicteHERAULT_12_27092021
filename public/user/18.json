@@ -1,6 +1,6 @@
 {
   "data": {
-    "id": 18,
+    "userId": 18,
     "userInfos": { "firstName": "Cécilia", "lastName": "Ratorez", "age": 34 },
     "todayScore": 0.3,
     "keyData": {
