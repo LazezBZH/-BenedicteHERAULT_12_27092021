@@ -15,18 +15,18 @@ export default class GetData {
   async getInfo(userId) {
     try {
       //for using mocked data
-      const response = await fetch("../user/" + userId + ".json");
+      //const response = await fetch("../user/" + userId + ".json");
       //for using API
-      //const response = await fetch("http://localhost:3001/user/" + userId);
+      const response = await fetch("http://localhost:3001/user/" + userId);
       const data = await response.json();
       return new User(data.data);
     } catch (error) {
       console.error(error);
       //for using mocked data
-      document.location.href =
-        "https://sportsee-p12-dfe-oc-herault-benedicte.netlify.app/profile";
+      /*document.location.href =
+        "https://sportsee-p12-dfe-oc-herault-benedicte.netlify.app/profile";*/
       //for using API
-      //document.location.href = "http://localhost:3000/profile";
+      document.location.href = "http://localhost:3000/profile";
     }
   }
 
@@ -38,18 +38,21 @@ export default class GetData {
   async getActivity(userId) {
     try {
       //for using mocked data
-      const response = await fetch("../user/" + userId + "/activity.json");
+      //const response = await fetch("../user/" + userId + "/activity.json");
       //for using API
-      //const response = await fetch("http://localhost:3001/user/" + userId + "/activity");
+      const response = await fetch(
+        "http://localhost:3001/user/" + userId + "/activity"
+      );
       const data = await response.json();
       return new Activity(data.data);
     } catch (error) {
       console.error(error);
       //for using mocked data
-      document.location.href =
-        "https://sportsee-p12-dfe-oc-herault-benedicte.netlify.app/profile";
+      /*document.location.href =
+        "https://sportsee-p12-dfe-oc-herault-benedicte.netlify.app/profile";*/
       //for using API
-      //document.location.href = "http://localhost:3000/profile";
+
+      document.location.href = "http://localhost:3000/profile";
     }
   }
 
@@ -61,20 +64,22 @@ export default class GetData {
   async getAverageSession(userId) {
     try {
       //for using mocked data
-      const response = await fetch(
+      /* const response = await fetch(
         "../user/" + userId + "/average-session.json"
-      );
+      );*/
       //for using API
-      //const response = await fetch("http://localhost:3001/user/" + userId + "/average-session");
+      const response = await fetch(
+        "http://localhost:3001/user/" + userId + "/average-sessions"
+      );
       const data = await response.json();
       return new Session(data.data);
     } catch (error) {
       console.error(error);
       //for using mocked data
-      document.location.href =
-        "https://sportsee-p12-dfe-oc-herault-benedicte.netlify.app/profile";
+      /*document.location.href =
+        "https://sportsee-p12-dfe-oc-herault-benedicte.netlify.app/profile";*/
       //for using API
-      //document.location.href = "http://localhost:3000/profile";
+      document.location.href = "http://localhost:3000/profile";
     }
   }
 
@@ -86,18 +91,20 @@ export default class GetData {
   async getPerformance(userId) {
     try {
       //for using mocked data
-      const response = await fetch("../user/" + userId + "/performance.json");
+      //const response = await fetch("../user/" + userId + "/performance.json");
       //for using API
-      //const response = await fetch("http://localhost:3001/user/" + userId + "/performance");
+      const response = await fetch(
+        "http://localhost:3001/user/" + userId + "/performance"
+      );
       const data = await response.json();
       return new Performance(data.data);
     } catch (error) {
       console.error(error);
       //for using mocked data
-      document.location.href =
-        "https://sportsee-p12-dfe-oc-herault-benedicte.netlify.app/profile";
+      /*document.location.href =
+        "https://sportsee-p12-dfe-oc-herault-benedicte.netlify.app/profile";*/
       //for using API
-      //document.location.href = "http://localhost:3000/profile";
+      document.location.href = "http://localhost:3000/profile";
     }
   }
 }
