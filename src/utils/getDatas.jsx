@@ -17,7 +17,7 @@ export default class GetData {
       //for using mocked data
       const response = await fetch("../user/" + userId + ".json");
       //for using API
-      //const response = await fetch("http://localhost:3001/user/" + userId);
+      // const response = await fetch("http://localhost:3001/user/" + userId);
       const data = await response.json();
       return new User(data.data);
     } catch (error) {
@@ -40,7 +40,9 @@ export default class GetData {
       //for using mocked data
       const response = await fetch("../user/" + userId + "/activity.json");
       //for using API
-      //const response = await fetch("http://localhost:3001/user/" + userId + "/activity");
+      /*const response = await fetch(
+        "http://localhost:3001/user/" + userId + "/activity"
+      );*/
       const data = await response.json();
       return new Activity(data.data);
     } catch (error) {
@@ -49,6 +51,7 @@ export default class GetData {
       document.location.href =
         "https://sportsee-p12-dfe-oc-herault-benedicte.netlify.app/profile";
       //for using API
+
       //document.location.href = "http://localhost:3000/profile";
     }
   }
@@ -65,7 +68,9 @@ export default class GetData {
         "../user/" + userId + "/average-session.json"
       );
       //for using API
-      //const response = await fetch("http://localhost:3001/user/" + userId + "/average-session");
+      /*const response = await fetch(
+        "http://localhost:3001/user/" + userId + "/average-sessions"
+      );*/
       const data = await response.json();
       return new Session(data.data);
     } catch (error) {
@@ -88,7 +93,9 @@ export default class GetData {
       //for using mocked data
       const response = await fetch("../user/" + userId + "/performance.json");
       //for using API
-      //const response = await fetch("http://localhost:3001/user/" + userId + "/performance");
+      /*const response = await fetch(
+        "http://localhost:3001/user/" + userId + "/performance"
+      );*/
       const data = await response.json();
       return new Performance(data.data);
     } catch (error) {

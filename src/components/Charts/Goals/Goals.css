@@ -1,8 +1,10 @@
 .GoalsContainer {
-  width: 20vw;
-  height: 20vw;
+  width: 19vw;
+  height: 19vw;
   position: relative;
   background-color: #e60000;
+  border-radius: 5px;
+  margin-right: 5px;
 }
 .GoalsTitle {
   width: 70%;
