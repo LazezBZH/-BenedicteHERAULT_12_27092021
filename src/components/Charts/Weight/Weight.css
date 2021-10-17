@@ -1,7 +1,8 @@
 .WeightContainer {
-  width: 85%;
+  width: 99%;
   background-color: #fbfbfb;
   margin-top: 4rem;
+  border-radius: 5px;
 }
 
 .custom-tooltip {

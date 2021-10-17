@@ -1,13 +1,14 @@
 .ScoreContainer {
-  width: 20vw;
-  height: 20vw;
+  width: 19vw;
+  height: 19vw;
   position: relative;
   background-color: #fbfbfb;
+  border-radius: 5px;
 }
 .ScoreTitle {
   position: absolute;
-  top: 5%;
-  left: 5%;
+  top: 10%;
+  left: 10%;
   font-size: 1rem;
   font-weight: 600;
   color: #20253a;

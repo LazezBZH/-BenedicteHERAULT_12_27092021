@@ -55,33 +55,33 @@ export default function Dashboard() {
             <Goals data={userAverageSession} />
             <RadarFig data={userPerfomance} />
             <Score data={user?.todayScore} />
-            <div className="dashboard-aside">
-              <DashboardAside
-                image={calories}
-                title="Calories"
-                value={user?.keyData?.calorieCount}
-                unit="kCal"
-              />
-              <DashboardAside
-                image={proteines}
-                title="Protéines"
-                value={user?.keyData?.proteinCount}
-                unit="g"
-              />
-              <DashboardAside
-                image={gludides}
-                title="Glucides"
-                value={user?.keyData?.carbohydrateCount}
-                unit="g"
-              />
-              <DashboardAside
-                image={lipides}
-                title="Lipides"
-                value={user?.keyData?.lipidCount}
-                unit="g"
-              />
-            </div>
           </div>
+        </div>
+        <div className="dashboard-aside">
+          <DashboardAside
+            image={calories}
+            title="Calories"
+            value={user?.keyData?.calorieCount}
+            unit="kCal"
+          />
+          <DashboardAside
+            image={proteines}
+            title="Protéines"
+            value={user?.keyData?.proteinCount}
+            unit="g"
+          />
+          <DashboardAside
+            image={gludides}
+            title="Glucides"
+            value={user?.keyData?.carbohydrateCount}
+            unit="g"
+          />
+          <DashboardAside
+            image={lipides}
+            title="Lipides"
+            value={user?.keyData?.lipidCount}
+            unit="g"
+          />
         </div>
       </div>
     </div>

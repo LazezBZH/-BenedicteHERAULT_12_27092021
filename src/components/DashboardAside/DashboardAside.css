@@ -1,18 +1,18 @@
 .dashboard-aside {
-  position: absolute;
-  right: 0rem;
-  top: 0;
-  bottom: 0;
-  margin-right: 3rem;
   display: flex;
+  width: auto;
   flex-direction: column;
   justify-content: space-between;
+  margin-right: 6rem;
 }
 .count {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   flex-direction: row;
-  margin: 2rem auto;
+  margin: 1rem 0;
+  background-color: #fbfbfb;
+  border-radius: 5px;
+  padding: 3rem 3rem;
 }
 .textCount {
   margin-left: 1rem;
