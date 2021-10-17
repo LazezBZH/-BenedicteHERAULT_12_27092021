@@ -26,7 +26,7 @@ Bénédicte Hérault
 
 
 ### 1 Application
-- Fork the repository (main branch) https://github.com/LazezBZH/BenedicteHERAULT_12_27092021
+- Fork the repository (with API branch) https://github.com/LazezBZH/BenedicteHERAULT_12_27092021
 - Clone it on your computer.
 - Open the folder.
 - The `yarn` command will allow you to install the dependencies.
