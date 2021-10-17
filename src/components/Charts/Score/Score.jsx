@@ -12,13 +12,21 @@ export default function Score({ data }) {
   ];
   const renderLabel = score[0].value + "%";
   console.log(renderLabel);
-
+  const data01 = [{ name: "A", value: 100 }];
   return (
     <section className="ScoreContainer">
       <div className="ScoreTitle">Score</div>
 
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>
+          <Pie
+            data={data01}
+            dataKey="value"
+            innerRadius={0}
+            outerRadius={80}
+            fill="white"
+            stroke="none"
+          />
           <Pie
             dataKey="value"
             data={score}

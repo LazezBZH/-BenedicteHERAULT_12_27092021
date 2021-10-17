@@ -2,10 +2,12 @@
   width: 20vw;
   height: 20vw;
   position: relative;
+  background-color: #fbfbfb;
 }
 .ScoreTitle {
   position: absolute;
-  top: 0;
+  top: 5%;
+  left: 5%;
   font-size: 1rem;
   font-weight: 600;
   color: #20253a;
